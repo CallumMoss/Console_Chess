@@ -4,4 +4,5 @@ Adheres to the PEP8 coding style and the GitLab Flow workflow.
 Release Plan:
 v0: from knowledge of chess and programming
 v1: adhere to chess programming standards
-v2: enable new features such as a bot feature or GUI
+v2: add a GUI
+v3: make own chess bot
