@@ -1,3 +1,7 @@
 Local 2 player chess played in the console.
 Written in Python.
 Adheres to the PEP8 coding style and the GitLab Flow workflow.
+Release Plan:
+v0: from knowledge of chess and programming
+v1: adhere to chess programming standards
+v2: enable new features such as a bot feature or GUI
