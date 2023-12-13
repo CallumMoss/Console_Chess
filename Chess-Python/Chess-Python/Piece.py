@@ -18,5 +18,44 @@ class Piece:
         self.__typical_value = typical_value
         self.__char_representation = type.value
 
+    def get_colour(self):
+        """
+        Returns the piece colour.
+        
+        :return: (Colour) The piece colour.
+        """
+        return self.__colour
+    
+    def get_type(self):
+        """
+        Returns the piece type.
+        
+        :return: (Piece) The piece type.
+        """
+        return self.__type
+
+    def get_pos(self):
+        """
+        Returns the piece position.
+        
+        :return: (tuple) The piece position.
+        """
+        return self.__pos
+
+    def get_typical_value(self):
+        """
+        Returns the typical piece value, as determined by chess conventions.
+        
+        :return: (float) The piece's typical value.
+        """
+        return self.__typical_value
+
+    def get_char_representation(self):
+        """
+        Returns the typical piece notation, as determined by chess conventions.
+        
+        :return: (char) The piece's character representation.
+        """
+        return self.__char_representation
 
 

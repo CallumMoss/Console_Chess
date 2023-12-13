@@ -19,7 +19,7 @@ class Board:
                                                 [Piece(Colour.WHITE, Type.ROOK, (7,0), 5.0), Piece(Colour.WHITE, Type.KNIGHT, (7,1), 3.0), Piece(Colour.WHITE, Type.BISHOP, (7,2), 3.25), Piece(Colour.WHITE, Type.QUEEN, (7,3), 9.0), Piece(Colour.WHITE, Type.KING, (7,4), 100.0), Piece(Colour.WHITE, Type.BISHOP, (7,5), 3.25), Piece(Colour.WHITE, Type.KNIGHT, (7,6), 3.0), Piece(Colour.WHITE, Type.ROOK, (7,7), 5.0)]]
         self.__game_over = False
         
-    def translate_move(self, desired_move):
+    def translate_move(self, desired_move_string_format):
         """
         Translates a user input for a desired move into a usable tuple.
         
@@ -43,13 +43,13 @@ class Board:
         for piece in self.__status:
             if piece == None: print("x")
             else: print(piece.get_char_representation())
-    
+            
     def check_move_legality(self, piece, desired_pos):
         """
         Checks whether a user's desired move is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         return False
@@ -59,7 +59,7 @@ class Board:
         Checks whether a user's desired move with a pawn is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         pass
@@ -69,7 +69,7 @@ class Board:
         Checks whether a user's desired move with a knight is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         pass
@@ -79,7 +79,7 @@ class Board:
         Checks whether a user's desired move with a bishop is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         pass
@@ -89,7 +89,7 @@ class Board:
         Checks whether a user's desired move with a rook is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         pass
@@ -99,7 +99,7 @@ class Board:
         Checks whether a user's desired move with a queen is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         pass
@@ -109,7 +109,7 @@ class Board:
         Checks whether a user's desired move with a king is legal.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         :return: (Boolean) Result of evaluation of legality.
         """
         pass
@@ -119,7 +119,7 @@ class Board:
         Moves a piece on the board.
         
         :param piece: (Piece) The piece that the user desires to move.
-        :param desired_pos: (String) The position the user desires to move a piece to.
+        :param desired_pos: (tuple) The position the user desires to move a piece to.
         """
         if self.check_move_legality(piece, desired_pos):
             pass
